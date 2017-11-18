@@ -1,0 +1,70 @@
+@import "helpers/mpwh-helpers.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.alignCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.colorBgNone {
+    background-color: transparent !important;
+}
+
+.invisible {
+    display: none !important;
+}
+
+.longString {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.customLoader .loader:after {
+    border-color: blue transparent transparent !important
+}
+
+td, th {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.chats{
+    margin-bottom: 40px;
+}
+
+.chat-list {
+    min-height: 3rem;
+    max-height: calc(100vh - 50px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.new-message {
+    bottom: -40px !important
+}
+
+.Title{
+    color: black;
+    text-align: center;
+    margin-top: 10px !important;
+}

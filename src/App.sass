@@ -1,0 +1,39 @@
+@import "./styles/helpers/all"
+
+.TopNav
+  height: 41px
+  border-bottom: 1px solid #d1d1d1
+.Logo
+  &:hover
+    background-color: #999
+  display: block
+  width: 77px
+  height: 41px
+  background-color: white
+  float: left
+  background-image: url('./static/logo.png');
+  background-repeat: no-repeat
+  background-position: center center
+.TopMenu
+  &ItemActive
+    background-color: #999
+  +clearfix
+  width: auto
+  height: 41px
+  list-style-type: none
+  margin: 0
+  padding: 0
+  overflow: hidden
+  background-color: white
+  li
+    &:hover
+      background-color: #999
+    float: left
+    height: 41px
+    a
+      display: inline-block
+      text-align: center
+      padding: 0 16px
+      line-height: 41px
+      text-decoration: none
+      color: #292929
