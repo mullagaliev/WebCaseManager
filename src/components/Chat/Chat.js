@@ -4,11 +4,14 @@ import ChatBubble from 'react-chat-bubble';
 import ClientAvatar from '../../static/avatarYou.png';
 import YouAvatar from '../../static/caseManager.jpg';
 import {Segment} from 'semantic-ui-react';
+import io from 'socket.io-client';
 
 class Chat extends Component {
   state = {
     messages: []
   };
+  // socket = io.connect('3810218e.ngrok.io', {path: '/ws_hub'});
+
   render() {
     return (
         <div>

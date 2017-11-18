@@ -21,13 +21,13 @@ class TopMenu extends Component {
                      activeClassName="selected">
             Главная
           </Menu.Item>
-          <Menu.Item as={NavLink} to="/reg"
+          <Menu.Item as={NavLink} to="/users"
                      activeClassName="selected">
-            Регистрация пациента
+            Пациенты
           </Menu.Item>
           <Menu.Item as={NavLink} to="/chat"
                      activeClassName="selected">
-            Общение с пацентом
+            Общение с пациентами
           </Menu.Item>
           <Menu.Menu position='right'>
             <Menu.Item
