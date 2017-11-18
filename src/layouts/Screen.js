@@ -11,12 +11,12 @@ class Screen extends Component {
   }
 
   render() {
-    const {showHeader, fullScreen} = this.props;
+    const {header, fullScreen} = this.props;
     return <div className={classNames(styles.App)}>
       {
-        showHeader ?
+        !Boolean(header) ?
             <TopMenu/> :
-            null
+            header
       }
       <section
           className={classNames(styles.AppContent, fullScreen ? styles.FullScreen : this.props.minHeader ? styles.AppContentMax : '')}>
@@ -39,12 +39,7 @@ class Screen extends Component {
 Screen.defaultProps = {
   showHeader: true,
   fullScreen: false,
-  header: <div>
-    {/*<div className={classNames(styles.AppHeaderLogo)}>*/}
-    {/*<img src={logo} alt=""/>*/}
-    {/*</div>*/}
-    <h1 className={classNames(styles.AppTitle)}>Welcome to Troovy admin panel</h1>
-  </div>,
+  header: null,
   content: <h1>Empty page</h1>,
   footer: <Grid centered>
     <Grid.Column mobile={16} tablet={12} computer={8}>

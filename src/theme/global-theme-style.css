@@ -68,3 +68,7 @@ td, th {
     text-align: center;
     margin-top: 10px !important;
 }
+
+.selected{
+    background-color: #c7c3c3 !important;
+}
