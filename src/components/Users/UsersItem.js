@@ -11,7 +11,7 @@ class UsersItem extends Component {
           <Table.Cell>
             <Header as='h2' textAlign='center'>{user.id}</Header>
           </Table.Cell>
-          <Table.Cell singleLine>{user.name}</Table.Cell>
+          <Table.Cell singleLine>{user.lastName} {user.name} {user.middleName}</Table.Cell>
           <Table.Cell>
             <Rating icon='star' rating={user.rating} defaultRating={3} maxRating={5} />
           </Table.Cell>

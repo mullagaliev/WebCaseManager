@@ -3,26 +3,28 @@ import PropTypes from 'prop-types';
 import {Header, Table, Rating, Button} from 'semantic-ui-react';
 import UsersItem from './UsersItem';
 
-const users = [
-  {
-    id: 1,
-    name: 'Муллагалиев Андрей Андреевич',
-    rating: 3,
-    progress: 0.8,
-    status: 0
-  },
-  {
-    id: 2,
-    name: 'Муллагалиев Венер Андреевич',
-    rating: 4,
-    progress: 0.6,
-    status: 1
-  }
-];
+// const users = [
+//   {
+//     id: 1,
+//     name: 'Муллагалиев Андрей Андреевич',
+//     rating: 3,
+//     progress: 0.8,
+//     status: 0
+//   },
+//   {
+//     id: 2,
+//     name: 'Муллагалиев Венер Андреевич',
+//     rating: 4,
+//     progress: 0.6,
+//     status: 1
+//   }
+// ];
 
 class UsersList extends Component {
   render() {
-    return (
+    const {users} = this.props;
+
+     return (
         <Table celled padded>
           <Table.Header>
             <Table.Row>

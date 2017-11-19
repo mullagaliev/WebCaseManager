@@ -24,7 +24,7 @@ class EditTextBlock extends Component {
               <Form.Group widths='equal'>
                 <Form.Field>
                   <label>Текст</label>
-                  <Input placeholder={data.text}/>
+                  <Input placeholder={data.text} defaultValue={data.text}/>
                 </Form.Field>
                 <Form.Field>
                   <label>Параметр 2</label>

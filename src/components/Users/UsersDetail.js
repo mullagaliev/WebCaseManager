@@ -7,16 +7,18 @@ import EditUser from './EditUser';
 class UsersDetail extends Component {
   render() {
     const {user} = this.props;
-    return (
-    <Grid columns={2} padded>
-      <Grid.Column>
-        <UserProfile user={user}/>
-      </Grid.Column>
-      <Grid.Column>
-        <EditUser user={user}/>
-      </Grid.Column>
-    </Grid>
-    );
+    if(user !== null)
+      return (
+      <Grid columns={2} padded>
+        <Grid.Column>
+          <UserProfile user={user}/>
+        </Grid.Column>
+        <Grid.Column>
+          <EditUser user={user}/>
+        </Grid.Column>
+      </Grid>
+      );
+    return <div>empty</div>;
   }
 }
 

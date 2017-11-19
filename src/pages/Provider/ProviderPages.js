@@ -9,7 +9,9 @@ class ProviderPages extends Component {
   render() {
     return (
         <Switch>
-          <Route path='/provider/edit' component={EditAttachmentsPage}/>
+          <Route path='/provider/edit/:image' component={({match}) => {
+            return <EditAttachmentsPage image={match.params.image}/>;
+          }}/>
           <Route component={ProviderIndexPage}/>
         </Switch>
     );

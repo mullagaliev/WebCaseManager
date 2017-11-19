@@ -16,7 +16,7 @@ class UsersPage extends Component {
                 <h1 className="Title">
                   Пациент №{match.params.user}
                 </h1>
-                <UserContainer/>
+                <UserContainer userId={match.params.user}/>
               </div>;
             }
             }/>

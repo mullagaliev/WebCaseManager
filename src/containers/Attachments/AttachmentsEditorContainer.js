@@ -4,16 +4,16 @@ import AttachmentsEditor from '../../components/Attachments/AttachmentsEditor';
 const request = require('superagent');
 
 const api_key = 'd10d6e5ff2aa413e8f39ba1aa2ae241e';
-const image = 'https://i.ytimg.com/vi/O4Ley2BBJUs/maxresdefault.jpg';
 
 class AttachmentsEditorContainer extends Component {
   state = {attach: {}};
 
   componentDidMount() {
+    const {image} = this.props;
     request.post('http://eastus.api.cognitive.microsoft.com/vision/v1.0/ocr?')
-        .send({language: 'unk', detectOrientation: true, url: image}) // query string
+        .send({language: 'unk', detectOrientation: true, url: `http://d96ee068.ngrok.io/out/${image}/3.2.clean.png`}) // query string
         .set('Ocp-Apim-Subscription-Key', api_key)
-        .end((err, res) => {
+        .end((err, res) => {``
           if (res.body) {
             this.setState({attach: res.body});
           }
@@ -21,7 +21,7 @@ class AttachmentsEditorContainer extends Component {
   }
 
   render() {
-    console.log(this.state);
+    const {image} = this.props;
     return (
         <AttachmentsEditor image={image} attach={this.state.attach} onEdit={() => {}}/>
     );

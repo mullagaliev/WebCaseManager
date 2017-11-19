@@ -10,8 +10,15 @@ class Chat extends Component {
   state = {
     messages: []
   };
-  // socket = io.connect('3810218e.ngrok.io', {path: '/ws_hub'});
-
+  socket = io.connect('bffa28e5.ngrok.io', {path: '/ws_hub'});
+  componentDidMount() {
+    // io.on('connection', function (data) {
+      this.socket.emit('say', { msg: 'world' });
+    //   this.socket.on('my other event', function (data) {
+    //     console.log(data);
+    //   });
+    // });
+  }
   render() {
     return (
         <div>

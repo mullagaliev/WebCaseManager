@@ -5,9 +5,10 @@ import AttachmentsEditorContainer from '../../containers/Attachments/Attachments
 
 class EditAttachmentsPage extends Component {
   render() {
+    const {image} = this.props;
     return (
         <ScreenDashboardProvider>
-          <AttachmentsEditorContainer/>
+          <AttachmentsEditorContainer image={image}/>
         </ScreenDashboardProvider>
     );
   }
