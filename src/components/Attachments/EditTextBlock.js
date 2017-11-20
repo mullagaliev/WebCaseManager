@@ -12,6 +12,7 @@ class EditTextBlock extends Component {
   render() {
     const {open} = this.state;
     const {children, data} = this.props;
+
     return (
         <Modal size={'large'} open={open} onClose={this.close}
                trigger={<div onClick={this.show()}>{children}</div>}>

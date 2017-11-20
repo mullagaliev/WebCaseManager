@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {OPENSV_API} from '../../constants/apiUrls';
+
 import AttachmentsEditor from '../../components/Attachments/AttachmentsEditor';
 const request = require('superagent');
 
@@ -11,9 +13,9 @@ class AttachmentsEditorContainer extends Component {
   componentDidMount() {
     const {image} = this.props;
     request.post('http://eastus.api.cognitive.microsoft.com/vision/v1.0/ocr?')
-        .send({language: 'unk', detectOrientation: true, url: `http://d96ee068.ngrok.io/out/${image}/3.2.clean.png`}) // query string
+        .send({language: 'ru', detectOrientation: true, url: `${OPENSV_API}/out/${image}/3.2.clean.png`}) // query string
         .set('Ocp-Apim-Subscription-Key', api_key)
-        .end((err, res) => {``
+        .end((err, res) => {
           if (res.body) {
             this.setState({attach: res.body});
           }

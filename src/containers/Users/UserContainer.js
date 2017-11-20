@@ -44,7 +44,7 @@ class UserContainer extends Component {
                 progress: 0.8,
                 status: 0,
                 hbDate: user.birthDate,
-                hbAddress: address[0] ? `${address[0].district} ${address[0].city} ${address[0].line[0]}` : "",
+                hbAddress: address ? `${address[0].district} ${address[0].city} ${address[0].line[0]}` : "",
                 desc: 'Краткая история болезни'
               };
             this.setState({user});

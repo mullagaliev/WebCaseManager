@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {OPENSV_API} from '../../constants/apiUrls';
 
 import EditTextBlock from './EditTextBlock';
 
@@ -38,15 +39,15 @@ class AttachmentsEditor extends Component {
         <div>
           {/*AttachmentsEditor*/}
           <h1 className={'Title'}><b>0.</b> Исходное изображение</h1>
-          <img src={`http://d96ee068.ngrok.io/out/${image}/0.original.png`} alt="" className={styles.ImageA}/>
+          <img src={`${OPENSV_API}/out/${image}/0.original.png`} alt="" className={styles.ImageA}/>
           <h1 className={'Title'}><b>1.</b> Повернутое изображение</h1>
-          <img src={`http://d96ee068.ngrok.io/out/${image}/1.rotated.png`} alt="" className={styles.ImageA}/>
+          <img src={`${OPENSV_API}/out/${image}/1.rotated.png`} alt="" className={styles.ImageA}/>
           <h1 className={'Title'}><b>2.</b> Обрезанное изображение</h1>
-          <img src={`http://d96ee068.ngrok.io/out/${image}/2.crop.png`} alt="" className={styles.ImageA}/>
+          <img src={`${OPENSV_API}/out/${image}/2.crop.png`} alt="" className={styles.ImageA}/>
           <h1 className={'Title'}><b>3.</b> Предобработное изображение</h1>
           <div className={styles.Container}>
             {regions}
-            <img src={`http://d96ee068.ngrok.io/out/${image}/3.2.clean.png`} alt="" className={styles.Image}/>
+            <img src={`${OPENSV_API}/out/${image}/3.2.clean.png`} alt="" className={styles.Image}/>
           </div>
         </div>
     );
